@@ -19,10 +19,10 @@ class HashTable {
             checkIfResize();
             int key = quadratic_probe(value);
             if(key == -1){
-                cout << "Max probing limit reached!" << endl;
+                cout << "Max probing limit reached! " << endl;
                 return;
             } else if(key == -2){
-                cout << "Duplicate key insertion is not allowed" << endl;
+                cout << "Duplicate key insertion is not allowed " << endl;
                 return;
             }
 
@@ -33,7 +33,7 @@ class HashTable {
         void remove(int value){
             int key = quadratic_probe_search(value);
             if(key == -1){
-                cout << "Element not found" << endl;
+                cout << "Element not found " << endl;
                 return;
             }
             table[key] = -1;
