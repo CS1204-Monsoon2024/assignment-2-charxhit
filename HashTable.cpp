@@ -16,6 +16,7 @@ class HashTable {
         }
 
         void insert(int value){
+            checkIfResize();
             int key = quadratic_probe(value);
             if(key == -1){
                 cout << "Max probing limit reached!" << endl;
@@ -27,8 +28,6 @@ class HashTable {
 
             table[key] = value;
             size ++;
-
-            checkIfResize();
         }
 
         void remove(int value){
